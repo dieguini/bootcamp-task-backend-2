@@ -13,6 +13,6 @@ public class Product {
   @Override
   public String toString() {
     // return super.toString();
-    return "Id: "+ this.prodId+" Name: "+this.name;
+    return "Id: "+ this.prodId+" Name: "+this.name+ " Quantity: "+this.qty;
   }
 }
