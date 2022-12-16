@@ -9,7 +9,7 @@ import com.example.models.Product;
 public class ProductRepository implements IProductRepository {
   private List<Product> products;
 
-  public Productrepository(){
+  public ProductRepository(){
     this.products = new ArrayList<>();
   }
 

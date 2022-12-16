@@ -13,10 +13,10 @@ public class RepositoriesConfigurator {
   public IProductRepository initProductRepository(){
     ProductRepository productRepository = new ProductRepository();
     productRepository.save(
-      new Product(1, "oreo", 3)
+      new Product("8712392-123213", "oreo", 3)
     );
     productRepository.save(
-      new Product(2, "mantequilla regia", 1)
+      new Product("09182032-323123", "mantequilla regia", 1)
     );
 
     return productRepository;
