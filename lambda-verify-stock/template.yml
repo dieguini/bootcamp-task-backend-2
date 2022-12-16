@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: An AWS Lambda application example.
+Resources:
+  function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: build/distributions/lambda-verify-stock-0.0.1-SNAPSHOT.zip
+      # Handler: com.example.handlers.FirstHandler
+      Handler: com.example.handlers.HandlerRequest
+      # FunctionName: lambda-spring-boot-function
+      FunctionName: lambda-athena-query-djauregui
+      Runtime: java11
+      Description: Java function - Athena Rows
+      MemorySize: 512
+      Timeout: 10
+      # Function's execution role
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AWSLambda_ReadOnlyAccess
+        - AWSXrayWriteOnlyAccess
+        - AWSLambdaVPCAccessExecutionRole
+      Tracing: Active
