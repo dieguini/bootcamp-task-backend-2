@@ -21,10 +21,27 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.7.3'
+	// https://mvnrepository.com/artifact/software.amazon.awssdk/auth
+	implementation 'software.amazon.awssdk:auth:2.17.202'
+
+	// https://mvnrepository.com/artifact/software.amazon.awssdk/athena
+	implementation 'software.amazon.awssdk:athena:2.17.202'
+
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk
+	implementation 'com.amazonaws:aws-java-sdk:1.12.231'
+
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-lambda-java-core
+	implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
+
+	compileOnly 'org.projectlombok:lombok:1.18.24'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
 
 tasks.named('test') {

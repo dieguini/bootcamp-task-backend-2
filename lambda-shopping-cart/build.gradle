@@ -21,7 +21,17 @@ repositories {
 }
 
 dependencies {
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter
+	implementation 'org.springframework.boot:spring-boot-starter:2.7.0'
+
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-lambda-java-core
+	implementation 'com.amazonaws:aws-lambda-java-core:1.2.1'
+	// https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk
+	implementation 'com.amazonaws:aws-java-sdk:1.12.231'
+	// https://mvnrepository.com/artifact/software.amazon.awssdk/athena
+	implementation 'software.amazon.awssdk:athena:2.17.202'
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
